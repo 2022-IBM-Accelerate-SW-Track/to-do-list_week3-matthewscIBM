@@ -35,6 +35,15 @@ class AddTodo extends Component {
   };
   render() {
     return (
+      <LocalizationProvider dateAdapter={AdapterDateFns}>         
+  <DesktopDatePicker
+       id="new-item-date"
+       label="Due Date"
+       value={/*value*/}
+       onChange={/*onChange*/}
+       renderInput={(params) => <TextField {...params} />}
+   />
+</LocalizationProvider>
       // 1. When rendering a component, you can render as many elements as you like as long as it is wrapped inside
       // one div element.
       // 2. The return statement should include a text field input with the handleChange function from above that
