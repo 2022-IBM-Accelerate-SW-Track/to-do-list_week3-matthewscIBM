@@ -35,12 +35,13 @@ class AddTodo extends Component {
   };
   render() {
     return (
+      handleChange = new Date(event).toLocalDateString()
       <LocalizationProvider dateAdapter={AdapterDateFns}>         
   <DesktopDatePicker
        id="new-item-date"
        label="Due Date"
-       value={/*value*/}
-       onChange={/*onChange*/}
+       value={new date}
+       onChange={handleChange}
        renderInput={(params) => <TextField {...params} />}
    />
 </LocalizationProvider>
@@ -55,7 +56,7 @@ class AddTodo extends Component {
         <TextField
           label="Add New Item"
           variant="outlined"
-          onChange={this.handleChange}
+          onChange={null}
           value={this.state.content}
         />
         <Button
